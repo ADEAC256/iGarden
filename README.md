@@ -45,29 +45,51 @@
   <summary>Table of Contents</summary>
   <ol>
     <li>
-      <a href="#about-the-project">About The Project</a>
+      <a href="#propos">A propos du projet</a>
+    </li>
+    <li>
+      <a href="#start">Getting Started</a>
       <ul>
-        <li><a href="#built-with">Site internet construit avec</a></li>
+        <li><a href="#material">Materiel</a></li>
+        <li><a href="#requis">Pre-requis</a></li>
+        <li><a href="#installation">Installation</a></li>
+        <li><a href="#file">Fichier</a></li>
       </ul>
     </li>
     <li>
-      <a href="#getting-started">Getting Started</a>
+      <a href="#usage">Usage</a>
       <ul>
-        <li><a href="#prerequisites">Pre-requis</a></li>
-        <li><a href="#installation">Installation</a></li>
+        <li><a href="#serveur">Serveur</a></li>
+        <li><a href="#systeme">Système</a></li>
+        <li><a href="#site">Site internet</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
+    <li>
+      <a href="#schema">Schema des architectures</a>
+      <ul>
+        <li><a href="#hard">Architecture hardware</a></li>
+        <li><a href="#soft">Architecture software</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#tools">Outils</a>
+      <ul>
+        <li><a href="#arduino">Software du système réalisé sur</a></li>
+        <li><a href="#flask">Serveur réalisé avec</a></li>
+        <li><a href="#bootstrap">Site internet réalisé avec</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#contact">Contact</a>
+      <ul>
+        <li><a href="#team">Equipe</a></li>
+      </ul>
+    </li>
   </ol>
 </details>
 
-
-
 <!-- ABOUT THE PROJECT -->
-## A propos du projet
+## <a name="propos"></a> A propos du projet
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
@@ -83,39 +105,27 @@ Notre solution, iGarden, consisterait donc en un système permettant :
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-### Système construit avec
-
-* [ESP32](https://www.gotronic.fr/art-module-nodemcu-esp32-28407.htm)
-* [DHT22](https://www.gotronic.fr/art-capteur-de-t-et-d-humidite-dht22-20719.htm)
-* [DS18B20](https://www.gotronic.fr/art-sonde-etanche-ds18b20-19339.htm)
-* [Soil Moisture Sensor](https://tinydb.readthedocs.io/en/latest/gla)
-* [TSL2561](https://learn.adafruit.com/tsl2561)
-* [HC-SR04](https://www.gotronic.fr/art-module-de-detection-us-hc-sr04-20912.htm)
-* [GoTronic PM3V](https://www.gotronic.fr/art-pompe-miniature-submersible-pm3v-32875.htm)
-* [Adafruit Relay](https://www.adafruit.com/product/3191)
-
-
-### Serveur construit avec
-
-* [Flask](https://flask.palletsprojects.com/en/2.0.x/)
-* [TinyDb](https://tinydb.readthedocs.io/en/latest/gla)
-
-### Site internet construit avec
-
-* [Bootstrap](https://getbootstrap.com)
-* [JQuery](https://jquery.com)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
 <!-- GETTING STARTED -->
-## Getting Started
+## <a name="start"></a> Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+Pour reproduire le système iGarden chez vous, le matériel et logiciels suivants sont nécessaire :
 
-### Pre-requis
+### <a name="material"></a> Matériel 
+
+* Pour récupérer les données sur l’environnement de la plante :
+  + [ESP32](https://www.gotronic.fr/art-module-nodemcu-esp32-28407.htm)
+  + [DHT22](https://www.gotronic.fr/art-capteur-de-t-et-d-humidite-dht22-20719.htm)
+  + [DS18B20](https://www.gotronic.fr/art-sonde-etanche-ds18b20-19339.htm)
+  + [Soil Moisture Sensor](https://tinydb.readthedocs.io/en/latest/gla)
+  + [TSL2561](https://learn.adafruit.com/tsl2561)
+  
+* Pour l’arrosage autonome de la plante :
+  * [HC-SR04](https://www.gotronic.fr/art-module-de-detection-us-hc-sr04-20912.htm)
+  * [GoTronic PM3V](https://www.gotronic.fr/art-pompe-miniature-submersible-pm3v-32875.htm)
+  * [Adafruit Relay](https://www.adafruit.com/product/3191)
+
+
+### <a name="requis"></a> Pre-requis
 
 Pour pouvoir utiliser flask, vous aurez besoin d'installer virtualenv. Virtualenv aide un utilisateur à créer plusieurs environnements Python côte à côte . Ainsi, il peut éviter les problèmes de compatibilité entre les différentes versions des bibliothèques. Cette commande nécessite des privilèges d'administrateur. 
 * virtualenv
@@ -123,7 +133,7 @@ Pour pouvoir utiliser flask, vous aurez besoin d'installer virtualenv. Virtualen
   sudo pip3 install virtualenv 
   ```
 
-### Installation
+### <a name="installation"></a> Installation
 
 1. Cloner le repository
    ```sh
@@ -146,7 +156,7 @@ Pour pouvoir utiliser flask, vous aurez besoin d'installer virtualenv. Virtualen
    pip3 install tinydb
    ```
 
-### Fichiers 
+### <a name="file"></a> Fichiers 
 
 - `hardware` contient le software du système. Le code est à mettre sur l'ESP32
  
@@ -159,18 +169,21 @@ Pour pouvoir utiliser flask, vous aurez besoin d'installer virtualenv. Virtualen
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- USAGE EXAMPLES -->
-## Usage
+## <a name="usage"></a> Usage
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
-### Systeme 
-Changer le mdp et SSID et mettre le code sur le microcontroller + commande
+### <a name="serveur"></a> Serveur 
+Comment lancer le serveur + ngrok + parler des alertes email
 
-### Serveur 
-Lancer le serveur + comamnde
+### <a name="systeme"></a> Systeme 
+Changer le mdp et SSID du wifi + changer lien ngrok
 
-### Site internet 
+Pour mettre le code sur le microcontrolleur, nous vous conseillons d'utiliser une IDE comme [Arduino](https://www.arduino.cc/).
 
+### <a name="site"></a> Site internet 
+Expliquer les liens a changer ngrok
+Expliquer ce qu'on retrouve le dashboard + screen et qu'on peut gerer plusieurs systèmes dessus 
 
 _For more examples, please refer to the [Documentation](https://example.com)_
 
@@ -179,26 +192,42 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 
 <!-- ROADMAP -->
-## Roadmap
+## <a name="schema"></a> Schéma des architectures 
 
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-    - [ ] Nested Feature
+### <a name="hard"></a> Architecture hardware 
+Photo de l'architecture (+ quelques mots)
+<br>
+### <a name="soft"></a> Architecture software
+Photo de l'architecture (+ quelques mots)
 
-See the [open issues](https://github.com/ADEAC256/iGarden/issues) for a full list of proposed features (and known issues).
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+## <a name="tools"></a> Outils utilisés
+
+### <a name="arduino"></a> Software du système réalisé sur
+* [Arduino](https://www.arduino.cc/)
+
+### <a name="flask"></a> Serveur construit avec
+
+* [Flask](https://flask.palletsprojects.com/en/2.0.x/)
+* [TinyDb](https://tinydb.readthedocs.io/en/latest/gla)
+
+### <a name="bootstrap"></a> Site internet construit avec
+
+* [Bootstrap](https://getbootstrap.com)
+* [JQuery](https://jquery.com)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- CONTACT -->
-## Contact
+## <a name="contact"></a> Contact
 
 iGarden - igarden.eise@gmail.com
 <br>
 <br>
 Project Link: [https://github.com/ADEAC256/iGarden](https://github.com/ADEAC256/iGarden)
 
-### Equipe : 
+### <a name="team"></a> Equipe : 
 * Ismail BENNIS : [Linkedin](https://www.linkedin.com/in/ismail-bennis/)
 * Alexandra DEAC : [Linkedin](https://www.linkedin.com/in/alexandra-deac/)
 * Julie RAGO : [Linkedin](https://www.linkedin.com/in/julie-rago/)
