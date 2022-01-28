@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <!-- Title -->
+    <title>Alazea - Gardening &amp; Landscaping HTML Template</title>
+ 
+    <link rel="icon" href="/static/img/core-img/favicon.ico">
+
+    
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/novus/nvd3/v1.8.1/build/nv.d3.css">
+
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader d-flex align-items-center justify-content-center">
+        <div class="preloader-circle"></div>
+        <div class="preloader-img">
+            <img src="/static/img/core-img/leaf.png" alt="">
+        </div>
+    </div>
+
+  <!-- ##### Header Area Start ##### -->
+    <header class="header-area">
+        
+        <!-- ***** Navbar Area ***** -->
+        <div class="alazea-main-menu">
+            <div class="classy-nav-container breakpoint-off">
+                <div class="container">
+                    <!-- Menu -->
+                    <nav class="classy-navbar justify-content-between" id="alazeaNav">
+
+                         <!-- Nav Brand -->
+                        <a href="{{ url_for('index')}}" class="nav-brand"><img src="/static/img/core-img/logo.svg" alt="" height="50px" width="80px"></a>
+
+                        <!-- Navbar Toggler -->
+                        <div class="classy-navbar-toggler">
+                            <span class="navbarToggler"><span></span><span></span><span></span></span>
+                        </div>
+
+                        <!-- Menu -->
+                        <div class="classy-menu">
+
+                            <!-- Close Button -->
+                            <div class="classycloseIcon">
+                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                            </div>
+
+                            <!-- Navbar Start -->
+                            <div class="classynav">
+                                <ul>
+                                    <li><a href="{{ url_for('index')}}">Accueil</a></li>
+                                    <li><a href="{{ url_for('about')}}">A propos de nous</a></li>
+                                    <li><a href="#">Les données</a>
+                                        <ul class="dropdown">
+                                            <li><a href="{{ url_for('checkout')}}">Gestion des devices</a></li>
+                                            <li><a href="{{ url_for('data')}}">Dashboard </a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                    <li><a href="{{ url_for('portfolio')}}">Quelques conseils</a></li>
+                                    <li><a href="{{ url_for('contact')}}">Contact</a></li>
+                                </ul>
+                            </div>
+                            <!-- Navbar End -->
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ##### Header Area End ##### -->
+
+    <!-- ##### Breadcrumb Area Start ##### -->
+    <div class="breadcrumb-area">
+        <!-- Top Breadcrumb Area -->
+        <div class="top-breadcrumb-area bg-img bg-overlay d-flex align-items-center justify-content-center" style="background-image: url(/static/img/bg-img/24.jpg);">
+            <h2>DASHBOARDS</h2>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="{{ url_for('index')}}"><i class="fa fa-home"></i> Accueil</a></li>
+                            <li class="breadcrumb-item">Les données</li>
+                            <li class="breadcrumb-item active" aria-current="page">Dashboards</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ##### Breadcrumb Area End ##### -->
+
+    <!-- ##### Team Area Start ##### -->
+    <section class="team-area section-padding-30-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <!-- Section Heading -->
+                    <div class="section-heading text-center">
+                        <h2 >Vos dashboards</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div id = "dashboard-buttons" class="row d-flex justify-content-center">
+
+            </div>
+        </div>
+        <!-- Side Image -->
+        <div class="side-img wow fadeInUp" data-wow-delay="500ms">
+            <img src="/static/img/core-img/pot.png" alt="">
+        </div>
+
+    </section>
+    <!-- ##### Team Area End ##### -->
+
+    <div id = "dahboard_containers" >
+
+    </div>
+
+  <!-- ##### Footer Area Start ##### -->
+    <footer class="footer-area bg-img" style="background-image: url(/static/img/bg-img/3.jpg);">
+        <!-- Main Footer Area -->
+        <div class="main-footer-area">
+            <div class="container">
+                <div class="row d-flex justify-content-center">
+
+                    <!-- Single Footer Widget -->
+                    <div class="col-12 col-sm-6 col-lg-5">
+                        <div class="single-footer-widget">
+                            <div class="footer-logo mb-50">
+                                <a href="{{ url_for('index')}}"><img src="/static/img/core-img/logo.svg" alt="" height="50px" width="80px"></a>
+                            </div>
+                            <h5 style="color:white;">L'innovation au service de l'entretien de votre plante</h5>
+                            
+                        </div>
+                    </div>
+
+                    
+
+                    <!-- Single Footer Widget -->
+                    <div class="col-12 col-sm-6 col-lg-5 d-flex justify-content-center">
+                        <div class="single-footer-widget">
+                            <div class="widget-title">
+                                <h5>CONTACT</h5>
+                            </div>
+
+                            <div class="contact-information">
+                                <p><span>iGarden:</span> igarden.eise@gmail.com</p>
+                                <p><span>Ismail BENNIS:</span> bennisismail9@gmail.com</p>
+                                <p><span>Alexandra DEAC:</span> alexandradeac44@gmail.com</p>
+                                <p><span>Julie RAGO:</span> julie.rgo1@gmail.com</p>
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom Area -->
+        <div class="footer-bottom-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="border-line"></div>
+                    </div>
+                    <!-- Copywrite Text -->
+                    <div class="col-12 col-md-6">
+                        <div class="copywrite-text">
+                            <p>&copy; <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+</p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ##### Footer Area End ##### -->
+
+    <!-- ##### All Javascript Files ##### -->
+    <!-- jQuery-2.2.4 js -->
+    <script src="/static/js/jquery/jquery-2.2.4.min.js"></script>
+    <!-- Popper js -->
+    <script src="/static/js/bootstrap/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="/static/js/bootstrap/bootstrap.min.js"></script>
+    
+    <!-- Favicon -->
+    
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script src="https://cdn.rawgit.com/novus/nvd3/v1.8.1/build/nv.d3.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/wordcloud.js"></script>
+
+    <script type="text/javascript">
+        function createDiv (divName, item) {
+            var $div = $("<div>", { id: divName });
+            $('#dahboard_containers').append($div);
+            var element = document.getElementById(divName);
+            element.setAttribute("w3-include-html", "{{ url_for('dashboard_template0')}}");
+        }
+
+        function includeHTML() {
+          var z, i, elmnt, file, xhttp;
+          /*loop through a collection of all HTML elements:*/
+          z = document.getElementsByTagName("*");
+          for (i = 0; i < z.length; i++) {
+            elmnt = z[i];
+            /*search for elements with a certain atrribute:*/
+            file = elmnt.getAttribute("w3-include-html");
+            if (file) {
+              /*make an HTTP request using the attribute value as the file name:*/
+              xhttp = new XMLHttpRequest();
+              xhttp.onreadystatechange = function() {
+                if (this.readyState == 4) {
+                  if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                  if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+                  /*remove the attribute, and call this function once more:*/
+                  elmnt.removeAttribute("w3-include-html");
+                  includeHTML();
+                }
+              }      
+              xhttp.open("GET", file, true);
+              xhttp.send();
+              /*exit the function:*/
+              counter++;
+              return counter;
+            }
+          }
+        };
+
+    </script>
+     <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script defer src="/static/mydashboard.js"></script>
+    <!-- All Plugins js -->
+    <script src="/static/js/plugins/plugins.js"></script>
+    <!-- Active js -->
+    <script src="/static/js/active.js"></script>
+   
+     
+</body>
+
+</html>

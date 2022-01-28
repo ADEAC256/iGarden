@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <!-- Title -->
+    <title>Alazea - Gardening &amp; Landscaping HTML Template</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="/static/img/core-img/favicon.ico">
+
+    <!-- Core Stylesheet -->
+    <link rel="stylesheet" href="/static/style.css">
+
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader d-flex align-items-center justify-content-center">
+        <div class="preloader-circle"></div>
+        <div class="preloader-img">
+            <img src="/static/img/core-img/leaf.png" alt="">
+        </div>
+    </div>
+
+ <!-- ##### Header Area Start ##### -->
+    <header class="header-area">
+        
+        <!-- ***** Navbar Area ***** -->
+        <div class="alazea-main-menu">
+            <div class="classy-nav-container breakpoint-off">
+                <div class="container">
+                    <!-- Menu -->
+                    <nav class="classy-navbar justify-content-between" id="alazeaNav">
+
+                         <!-- Nav Brand -->
+                        <a href="{{ url_for('index')}}" class="nav-brand"><img src="/static/img/core-img/logo.svg" alt="" height="50px" width="80px"></a>
+
+                        <!-- Navbar Toggler -->
+                        <div class="classy-navbar-toggler">
+                            <span class="navbarToggler"><span></span><span></span><span></span></span>
+                        </div>
+
+                        <!-- Menu -->
+                        <div class="classy-menu">
+
+                            <!-- Close Button -->
+                            <div class="classycloseIcon">
+                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                            </div>
+
+                            <!-- Navbar Start -->
+                            <div class="classynav">
+                                <ul>
+                                    <li><a href="{{ url_for('index')}}">Accueil</a></li>
+                                    <li><a href="{{ url_for('about')}}">A propos de nous</a></li>
+                                    <li><a href="#">Les données</a>
+                                        <ul class="dropdown">
+                                            <li><a href="{{ url_for('checkout')}}">Gestion des devices</a></li>
+                                            <li><a href="{{ url_for('data')}}">Dashboard </a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                    <li><a href="{{ url_for('portfolio')}}">Quelques conseils</a></li>
+                                    <li><a href="{{ url_for('contact')}}">Contact</a></li>
+                                </ul>
+                            </div>
+                            <!-- Navbar End -->
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ##### Header Area End ##### -->
+
+    <!-- ##### Breadcrumb Area Start ##### -->
+    <div class="breadcrumb-area">
+        <!-- Top Breadcrumb Area -->
+        <div class="top-breadcrumb-area bg-img bg-overlay d-flex align-items-center justify-content-center" style="background-image: url(/static/img/bg-img/24.jpg);">
+            <h2>QUELQUES CONSEILS</h2>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="{{ url_for('index')}}"><i class="fa fa-home"></i> Accueil</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Quelques conseils</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ##### Breadcrumb Area End ##### -->
+
+    <!-- ##### Portfolio Area Start ##### -->
+    <section class="alazea-portfolio-area portfolio-page section-padding-0-50">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <!-- Section Heading -->
+                    <div class="section-heading text-center">
+                        <h1>QUELQUES CONSEILS</h1>
+                        <p> Vos plantes d’intérieur font grise mine ? 
+                         </p>
+                    </div>
+                    <div class="portfolio-text mb-50">
+                        <div class="row">
+                            <div class="col-12 ">
+                               
+                                <p>Les plantes d’intérieur peuvent être fragilisées à cause des courants d’air. De la même façon, leur terre peut s’assécher à cause des radiateurs. Ainsi, il est important de veiller sur elles et de redoubler d’attention si on ne souhaite pas les voir mourir. Découvrez nos meilleurs conseils pour les entretenir et en prendre soin. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+	</section>
+	
+	<section class="about-us-area">
+		<div class="container">
+			<div class="row justify-content-between">
+				<div class="col-12 col-lg-5">
+					<!-- Section Heading -->
+					<div class="section-heading">
+						<h2><b>PLANTES GRASSES / CACTUS</b></h2>
+					</div>
+					<p>Les plantes grasses ont en commun leur étonnante capacité à se passer d’eau grâce aux réserves contenues entre autres dans leurs feuilles. De culture très simple, elles réclament essentiellement un bon éclairage et peu d’arrosage.</p>
+				
+					<!-- Progress Bar Content Area -->
+					<div class="alazea-progress-bar mb-50">
+						<!-- Single Progress Bar -->
+						<div class="single_progress_bar">
+							<p>Humidité du sol</p>
+							<div id="bar1" class="barfiller">
+								<div class="tipWrap">
+									<span class="tip"></span>
+								</div>
+								<span class="fill" data-percentage="20"></span>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				
+				<div class="col-12 col-lg-6">
+                    <div class="alazea-benefits-area">
+                        <div class="row">
+                            <!-- Single Benefits Area -->
+                            <div class="col-12 col-sm-6">
+                                <div class="single-benefits-area">
+                                    <img src="/static/img/core-img/b1.png" alt="">
+                                    <h5>Température ambiante</h5>
+                                    <p>Les plantes grasses viennent de pays arides. Elles aiment donc les températures chaudes. De manière générale, ce type de végétal possède un pouvoir d’adaptation assez impressionnant.</p>
+                                </div>
+                            </div>
+
+                            <!-- Single Benefits Area -->
+                            <div class="col-12 col-sm-6">
+                                <div class="single-benefits-area">
+                                    <img src="/static/img/core-img/b3.png" alt="">
+                                    <h5>Luminosité ambiante</h5>
+                                    <p>Intiam eu sagittis est, at commodo lacini libero. Praesent dignissim sed odio vel aliquam manta lagorn.</p>
+                                </div>
+                            </div>
+
+                           
+                        </div>
+                    </div>
+				</div>
+				
+			</div>
+		</div>
+
+	</section>
+
+	<section class="about-us-area mt-50">
+		<div class="container">
+			<div class="row justify-content-between">
+				<div class="col-12 col-lg-5">
+					<!-- Section Heading -->
+					<div class="section-heading ">
+						<h2><b>PLANTES VERTES</b></h2>
+					</div>
+					<p>Les plantes vertes requièrent un peu d’entretien en fonction de l’environnement dans lequel elles se trouvent. Il est important de les exposer à la lumière, et l’arrosage doit être adapté afin de ne pas rendre la plante malade.</p>
+				
+					<!-- Progress Bar Content Area -->
+					<div class="alazea-progress-bar mb-50">
+						<!-- Single Progress Bar -->
+						<div class="single_progress_bar">
+							<p>Humidité du sol</p>
+							<div id="bar2" class="barfiller">
+								<div class="tipWrap">
+									<span class="tip"></span>
+								</div>
+								<span class="fill" data-percentage="40"></span>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				
+				<div class="col-12 col-lg-6">
+                    <div class="alazea-benefits-area">
+                        <div class="row">
+                            <!-- Single Benefits Area -->
+                            <div class="col-12 col-sm-6">
+                                <div class="single-benefits-area">
+                                    <img src="/static/img/core-img/b1.png" alt="">
+                                    <h5>Température ambiante</h5>
+                                    <p>...</p>
+                                </div>
+                            </div>
+
+                            <!-- Single Benefits Area -->
+                            <div class="col-12 col-sm-6">
+                                <div class="single-benefits-area">
+                                    <img src="/static/img/core-img/b3.png" alt="">
+                                    <h5>Luminosité ambiante</h5>
+                                    <p>Intiam eu sagittis est, at commodo lacini libero. Praesent dignissim sed odio vel aliquam manta lagorn.</p>
+                                </div>
+                            </div>
+
+                           
+                        </div>
+                    </div>
+				</div>
+				
+			</div>
+		</div>
+		
+	</section>
+	
+	<section class="about-us-area mt-50">
+		<div class="container">
+			<div class="row justify-content-between">
+				<div class="col-12 col-lg-5">
+					<!-- Section Heading -->
+					<div class="section-heading">
+						<h2><b>PLANTES TROPICALES </b></h2>
+					</div>
+					<p>Les plantes tropicales sont originaires des régions comprises entre les tropiques du Cancer et du Capricorne. Ces plantes aiment essentiellement la chaleur, mais attention à ne pas les exposer directement sous les rayons du Soleil au risque de les griller !</p>
+				
+					<!-- Progress Bar Content Area -->
+					<div class="alazea-progress-bar mb-50">
+						<!-- Single Progress Bar -->
+						<div class="single_progress_bar">
+							<p>Humidité du sol</p>
+							<div id="bar3" class="barfiller">
+								<div class="tipWrap">
+									<span class="tip"></span>
+								</div>
+								<span class="fill" data-percentage="65"></span>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				
+				<div class="col-12 col-lg-6">
+                    <div class="alazea-benefits-area">
+                        <div class="row">
+                            <!-- Single Benefits Area -->
+                            <div class="col-12 col-sm-6">
+                                <div class="single-benefits-area">
+                                    <img src="/static/img/core-img/b1.png" alt="">
+                                    <h5>Température ambiante</h5>
+                                    <p>Intiam eu sagittis est, at commodo lacini libero. Praesent dignissim sed odio vel aliquam manta lagorn.</p>
+                                </div>
+                            </div>
+
+                            <!-- Single Benefits Area -->
+                            <div class="col-12 col-sm-6">
+                                <div class="single-benefits-area">
+                                    <img src="/static/img/core-img/b3.png" alt="">
+                                    <h5>Luminosité ambiante</h5>
+                                    <p>Intiam eu sagittis est, at commodo lacini libero. Praesent dignissim sed odio vel aliquam manta lagorn.</p>
+                                </div>
+                            </div>
+
+                           
+                        </div>
+                    </div>
+				</div>
+				
+			</div>
+		</div>
+		<div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="border-line"></div>
+                </div>
+            </div>
+        </div>
+		
+	</section>
+
+   <!-- ##### Footer Area Start ##### -->
+    <footer class="footer-area bg-img" style="background-image: url(/static/img/bg-img/3.jpg);">
+        <!-- Main Footer Area -->
+        <div class="main-footer-area">
+            <div class="container">
+                <div class="row d-flex justify-content-center">
+
+                    <!-- Single Footer Widget -->
+                    <div class="col-12 col-sm-6 col-lg-5">
+                        <div class="single-footer-widget">
+                            <div class="footer-logo mb-50">
+                                <a href="{{ url_for('index')}}"><img src="/static/img/core-img/logo.svg" alt="" height="50px" width="80px"></a>
+                            </div>
+                            <h5 style="color:white;">L'innovation au service de l'entretien de votre plante</h5>
+                            
+                        </div>
+                    </div>
+
+                    
+
+                    <!-- Single Footer Widget -->
+                    <div class="col-12 col-sm-6 col-lg-5 d-flex justify-content-center">
+                        <div class="single-footer-widget">
+                            <div class="widget-title">
+                                <h5>CONTACT</h5>
+                            </div>
+
+                            <div class="contact-information">
+                                <p><span>iGarden:</span> igarden.eise@gmail.com</p>
+                                <p><span>Ismail BENNIS:</span> bennisismail9@gmail.com</p>
+                                <p><span>Alexandra DEAC:</span> alexandradeac44@gmail.com</p>
+                                <p><span>Julie RAGO:</span> julie.rgo1@gmail.com</p>
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom Area -->
+        <div class="footer-bottom-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="border-line"></div>
+                    </div>
+                    <!-- Copywrite Text -->
+                    <div class="col-12 col-md-6">
+                        <div class="copywrite-text">
+                            <p>&copy; <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+</p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ##### Footer Area End ##### -->
+    <!-- ##### All Javascript Files ##### -->
+    <!-- jQuery-2.2.4 js -->
+    <script src="/static/js/jquery/jquery-2.2.4.min.js"></script>
+    <!-- Popper js -->
+    <script src="/static/js/bootstrap/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="/static/js/bootstrap/bootstrap.min.js"></script>
+    <!-- All Plugins js -->
+    <script src="/static/js/plugins/plugins.js"></script>
+    <!-- Active js -->
+    <script src="/static/js/active.js"></script>
+</body>
+
+</html>

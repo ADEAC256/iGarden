@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <!-- Title -->
+    <title>Alazea - Gardening &amp; Landscaping HTML Template</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+     <script src="https://www.gstatic.com/charts/loader.js"></script>
+
+     
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script src="https://cdn.rawgit.com/novus/nvd3/v1.8.1/build/nv.d3.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/wordcloud.js"></script> 
+
+    <!-- Favicon -->
+    <link rel="icon" href="/static/img/core-img/favicon.ico">
+
+    <script src="/static/mydashboard.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/novus/nvd3/v1.8.1/build/nv.d3.css">
+
+    
+
+  </head>
+
+  <body>
+
+    <!-- ##### Service Area Start ##### -->
+    <section class="our-services-area bg-gray section-padding-100-0">
+        
+        <div class=" container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-12">
+                    <!-- Section Heading -->
+                    <div class="section-heading text-center">
+                        <h2>Mon dashboard</h2>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            <div class="container mt-3 mb-30 " >
+                <div class="row d-flex justify-content-center ">
+
+                    <!-- Single Cool Facts Area -->
+                    <div class="col-sm-6 colmd widget d-flex align-items-center justify-content-center mr-2 ">
+                        <div class="single-cool-fact">
+                           <div class="section-heading1 text-center blockquote-text ">
+                                <h4 >Niveau d'eau</h4>
+                                <h2 class="mt-3"> <b>Vide</b></h2>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 colmd widget d-flex align-items-center justify-content-center mr-2">
+                        <div class="single-cool-fact ">
+                           <div class="section-heading1 text-center blockquote-text">
+                                <h4>Température intérieur</h4>
+                                <h2 class="mt-3"> <b>40°C</b></h2>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 colmd widget d-flex align-items-center justify-content-center mr-2">
+                        <div class="single-cool-fact  ">
+                           <div class="section-heading1 text-center blockquote-text">
+                                <h4>Humidité intérieur</h4>
+                                <h2 class="mt-3"> <b>65%</b></h2>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 colmd widget d-flex align-items-center justify-content-center">
+                        <div class="single-cool-fact">
+                           <div class="section-heading1 text-center blockquote-text">
+                                <h4 >Luminosité</h4>
+                                <h2 class="mt-3"> <b>Bonne</b></h2>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="row align-items-center justify-content-between">
+
+                <div class="col-12 col-lg-6  mt-3 " >
+                    <div class="alazea-service-area mb-10">
+
+                        <!-- Single Service Area -->
+                        <div class="single-service-area d-flex align-items-center">
+                           <div id="meteo" class="chart">
+                                    <div class="blockquote-text text-center">
+                                        <h4>Température intérieur</h4>
+                                    </div>
+                                <svg style="min-height: 310px;"></svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-6  mt-3 ">
+                    <div class="alazea-service-area mb-10">
+
+                        <!-- Single Service Area -->
+                        <div class="single-service-area d-flex align-items-center">
+                            <div id="hum" class="chart">
+                                  <div class="blockquote-text text-center">
+                                        <h4>Humidité intérieur</h4>
+                                   </div>
+                              <svg style="min-height: 310px;"></svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+
+        </div>
+
+        <div class=" container">
+            <div class="row align-items-center justify-content-between">
+
+                <div class="col-12 col-lg-6  mt-3 " >
+                    <div class="alazea-service-area mb-10">
+
+                        <!-- Single Service Area -->
+                        <div class="single-service-area d-flex align-items-center">
+                           <div id="tempext" class="chart">
+                                    <div class="blockquote-text text-center">
+                                        <h4>Température extérieur</h4>
+                                    </div>
+                                <svg style="min-height: 310px;"></svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-6  mt-3 ">
+                    <div class="alazea-service-area mb-10">
+
+                        <!-- Single Service Area -->
+                        <div class="single-service-area d-flex align-items-center">
+                            <div id="humext" class="chart">
+                                  <div class="blockquote-text text-center">
+                                        <h4>Humidité extérieur</h4>
+                                   </div>
+                              <svg style="min-height: 310px;"></svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- ##### Service Area End ##### -->
+
+  </body>
+</html>

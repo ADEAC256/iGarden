@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <!-- Title -->
+    <title>Alazea - Gardening &amp; Landscaping HTML Template</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="/static/img/core-img/favicon.ico">
+
+    <!-- Core Stylesheet -->
+    <link rel="stylesheet" href="/static/style.css">
+
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader d-flex align-items-center justify-content-center">
+        <div class="preloader-circle"></div>
+        <div class="preloader-img">
+            <img src="/static/img/core-img/leaf.png" alt="">
+        </div>
+    </div>
+
+    <!-- ##### Header Area Start ##### -->
+    <header class="header-area">
+        
+        <!-- ***** Navbar Area ***** -->
+        <div class="alazea-main-menu">
+            <div class="classy-nav-container breakpoint-off">
+                <div class="container">
+                    <!-- Menu -->
+                    <nav class="classy-navbar justify-content-between" id="alazeaNav">
+
+                         <!-- Nav Brand -->
+                        <a href="{{ url_for('index')}}" class="nav-brand"><img src="/static/img/core-img/logo.svg" alt="" height="50px" width="80px"></a>
+
+                        <!-- Navbar Toggler -->
+                        <div class="classy-navbar-toggler">
+                            <span class="navbarToggler"><span></span><span></span><span></span></span>
+                        </div>
+
+                        <!-- Menu -->
+                        <div class="classy-menu">
+
+                            <!-- Close Button -->
+                            <div class="classycloseIcon">
+                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                            </div>
+
+                            <!-- Navbar Start -->
+                            <div class="classynav">
+                                <ul>
+                                    <li><a href="{{ url_for('index')}}">Accueil</a></li>
+                                    <li><a href="{{ url_for('about')}}">A propos de nous</a></li>
+                                    <li><a href="#">Les données</a>
+                                        <ul class="dropdown">
+                                            <li><a href="{{ url_for('checkout')}}">Gestion des devices</a></li>
+                                            <li><a href="{{ url_for('data')}}">Dashboard </a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                    <li><a href="{{ url_for('portfolio')}}">Quelques conseils</a></li>
+                                    <li><a href="{{ url_for('contact')}}">Contact</a></li>
+                                </ul>
+
+                               
+
+                            </div>
+                            <!-- Navbar End -->
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ##### Header Area End ##### -->
+
+    <!-- ##### Hero Area Start ##### -->
+    <section class="hero-area">
+        <div class="hero-post-slides owl-carousel">
+
+            <!-- Single Hero Post -->
+            <div class="single-hero-post bg-overlay">
+                <!-- Post Image -->
+                <div class="slide-img bg-img" style="background-image: url(/static/img/bg-img/1.jpg);"></div>
+                <div class="container h-100">
+                    <div class="row h-100 align-items-center">
+                        <div class="col-12">
+                            <!-- Post Content -->
+                            <div class="hero-slides-content text-center">
+                                <h2>Quand une fleur ne fleurit pas, on corrige l'environnement dans lequel elle pousse. Pas la fleur.</h2>
+                                <p>L'équipe de iGarden est là pour vous guider.</p>
+                                <div class="welcome-btn-group mt-50">
+                                    <a href="{{ url_for('contact')}}" class="btn alazea-btn mr-30">CONTACT US</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Single Hero Post -->
+            <div class="single-hero-post bg-overlay">
+                <!-- Post Image -->
+                <div class="slide-img bg-img" style="background-image: url(/static/img/bg-img/2.jpg);"></div>
+                <div class="container h-100">
+                    <div class="row h-100 align-items-center">
+                        <div class="col-12">
+                            <!-- Post Content -->
+                            <div class="hero-slides-content text-center">
+                                <h2>Quand une fleur ne fleurit pas, on corrige l'environnement dans lequel elle pousse. Pas la fleur.</h2>
+                                <p>L'équipe de iGarden est là pour vous guider.</p>
+                                <div class="welcome-btn-group mt-50">
+                                    <a href="{{ url_for('contact')}}" class="btn alazea-btn mr-30">CONTACT US</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- ##### Hero Area End ##### -->
+	
+	
+	    <!-- ##### About Area Start ##### -->
+    <section class="about-us-area section-padding-100-0">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-12 ">
+                    <!-- Section Heading -->
+                    <div class="section-heading text-center">
+                        <h2>BIENVENUE SUR VOTRE ESPACE PERSONNEL</h2>
+                        
+                    </div>
+                    <div class="portfolio-text ">
+                        <div class="row">
+                            <div class="col-12 ">
+                               
+                                <p class="text-justify">Sur votre espace personnel, vous pourrez trouver toutes les informations relatives à vos plantes. 
+                                <br> <br>
+                                Pour celà, il suffit de vous rendre sur la page <a style="color:#70c745;" href="{{ url_for('checkout')}}"> Gestion des devices </a> et d'enregistrer le système que vous avez fixé sur votre plante. On vous demandera de renseigner le nom de votre plante (libre a vous), l'ID du kit qui correspond au nombre de device en votre posssesion (si vous en avez 2, l'ID du premier sera 1 et l'ID du second sera 2) et le type de votre plante (grasse, normale ou tropicale). Une fois enregistré, votre système apparaitra dans la liste des devices et sera stocké dans notre base de données. Lors d'une prochaine connexion, il ne sera donc pas nécéssaire de le renseigné une nouvelle fois car il sera sauvagardé. 
+                                <br> <br>
+                                Lorsque tous vos systèmes sont dans notre base de données, vous pourrez accéder à vos dashboards générés automatiquement. Ils vous afficheront les données mesurées par chacun de vos systèmes. Vos dashboard sont accéssible sur la page <a style="color:#70c745;" href="{{ url_for('data')}}"> Dashboards </a>. Attention, si aucun système n'est enregistré, cette page sera vide.
+                                <br> <br>
+                                Une plante est comme un enfant, il faut s'en occuper. Mais comment? Pas de panique. Vous trouverez ici aussi des petits conseils, sur la page <a style="color:#70c745;" href="{{ url_for('portfolio')}}"> Conseils</a> , en fonction du type de plante (grasse, normale ou tropicale) pour vous aider a mieux connaitre et comprendre ce dont votre plante a besoin. 
+                                <br> <br>
+                                En cas de problème, n'hésitez pas à nous contacter. Nos coordonnées se trouvent sur la page <a style="color:#70c745;" href="{{ url_for('contact')}}"> Contact</a> . On se tient à votre disposition et on répondra avec plaisir à toutes vos interrogations. 
+                                <br> <br>
+                                 </p>
+                            </div>
+                            <div class="col-12 d-flex justify-content-center">
+                                <div class="single-post-details-area">
+                                    <div class="post-content">
+                                        <blockquote>
+                                            <div class="blockquote-text">
+                                                <h5>En vous remerciant de faire confiance à iGarden pour veiller au bien-etre de vos plantes.</h5>
+                                                <h5 style="color:#70c745;">L'équipe de iGarden</h5>
+                                            </div>
+                                        </blockquote>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="border-line"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ##### About Area End ##### -->
+	
+
+    <!-- ##### Service Area Start ##### -->
+    <section class="our-services-area bg-gray section-padding-100-0">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <!-- Section Heading -->
+                    <div class="section-heading text-center">
+                        <h2>NOS SERVICES</h2>
+                        <p>On vous apporte le service parfait pour vos plantes</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row align-items-center justify-content-between">
+                <div class="col-12 col-lg-5">
+                    <div class="alazea-service-area mb-100">
+
+                        <!-- Single Service Area -->
+                        <div class="single-service-area d-flex align-items-center">
+                            <!-- Icon -->
+                            <div class="service-icon mr-30">
+                                <img src="/static/img/core-img/s1.png" alt="">
+                            </div>
+                            <!-- Content -->
+                            <div class="service-content">
+                                <h5>Bien-etre de vos plantes</h5>
+                                <p class="text-justify">Avec notre système mesurant les données de votre plante en direct, vous pourrez avoir un affichage complet et détaillé de l'état de celle-ci. </p>
+                            </div>
+                        </div>
+
+                        <!-- Single Service Area -->
+                        <div class="single-service-area d-flex align-items-center">
+                            <!-- Icon -->
+                            <div class="service-icon mr-30">
+                                <img src="/static/img/core-img/s2.png" alt="">
+                            </div>
+                            <!-- Content -->
+                            <div class="service-content">
+                                <h5>Arrosage automatique</h5>
+                                <p class="text-justify">A l'aide des données mesurées et des données de référence que nous possédons, nous serons en mesure d'arroser en temps voulu et en quantité suffisante votre plante.</p>
+                            </div>
+                        </div>
+
+                        <!-- Single Service Area -->
+                        <div class="single-service-area d-flex align-items-center">
+                            <!-- Icon -->
+                            <div class="service-icon mr-30">
+                                <img src="/static/img/core-img/s3.png" alt="">
+                            </div>
+                            <!-- Content -->
+                            <div class="service-content">
+                                <h5>Conseils</h5>
+                                <p class="text-justify">Chaque type de plantes ont des besoins qui leurs sont propres, c'est pourquoi nous vous avons reservé un espace qui vous permettra d'en apprendre plus sur vos plantes.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-6">
+                    <div class="alazea-video-area bg-overlay mb-100">
+                        <img src="/static/img/bg-img/23.jpg" alt="">
+                        <a href="http://www.youtube.com/watch?v=7HKoqNJtMTQ" class="video-icon">
+                            <i class="fa fa-play" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ##### Service Area End ##### -->
+
+
+    <!-- ##### Footer Area Start ##### -->
+    <footer class="footer-area bg-img" style="background-image: url(/static/img/bg-img/3.jpg);">
+        <!-- Main Footer Area -->
+        <div class="main-footer-area">
+            <div class="container">
+                <div class="row d-flex justify-content-center">
+
+                    <!-- Single Footer Widget -->
+                    <div class="col-12 col-sm-6 col-lg-5">
+                        <div class="single-footer-widget">
+                            <div class="footer-logo mb-50">
+                                <a href="{{ url_for('index')}}"><img src="/static/img/core-img/logo.svg" alt="" height="50px" width="80px"></a>
+                            </div>
+                            <h5 style="color:white;">L'innovation au service de l'entretien de votre plante</h5>
+                            
+                        </div>
+                    </div>
+
+                    
+
+                    <!-- Single Footer Widget -->
+                    <div class="col-12 col-sm-6 col-lg-5 d-flex justify-content-center">
+                        <div class="single-footer-widget">
+                            <div class="widget-title">
+                                <h5>CONTACT</h5>
+                            </div>
+
+                            <div class="contact-information">
+								<p><span>iGarden:</span> igarden.eise@gmail.com</p>
+                                <p><span>Ismail BENNIS:</span> bennisismail9@gmail.com</p>
+                                <p><span>Alexandra DEAC:</span> alexandradeac44@gmail.com</p>
+                                <p><span>Julie RAGO:</span> julie.rgo1@gmail.com</p>
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom Area -->
+        <div class="footer-bottom-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="border-line"></div>
+                    </div>
+                    <!-- Copywrite Text -->
+                    <div class="col-12 col-md-6">
+                        <div class="copywrite-text">
+                            <p>&copy; <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+</p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ##### Footer Area End ##### -->
+
+    <!-- ##### All Javascript Files ##### -->
+    <!-- jQuery-2.2.4 js -->
+    <script src="/static/js/jquery/jquery-2.2.4.min.js"></script>
+    <!-- Popper js -->
+    <script src="/static/js/bootstrap/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="/static/js/bootstrap/bootstrap.min.js"></script>
+    <!-- All Plugins js -->
+    <script src="/static/js/plugins/plugins.js"></script>
+    <!-- Active js -->
+    <script src="/static/js/active.js"></script>
+</body>
+
+</html>

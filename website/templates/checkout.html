@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <!-- Title -->
+    <title>Alazea - Gardening &amp; Landscaping HTML Template</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="/static/img/core-img/favicon.ico">
+
+    <!-- jQuery-2.2.4 js -->
+    <script src="/static/js/jquery/jquery-2.2.4.min.js"></script>
+    <!-- Core Stylesheet -->
+    <link rel="stylesheet" href="/static/style.css">
+
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader d-flex align-items-center justify-content-center">
+        <div class="preloader-circle"></div>
+        <div class="preloader-img">
+            <img src="/static/img/core-img/leaf.png" alt="">
+        </div>
+    </div>
+
+  <!-- ##### Header Area Start ##### -->
+    <header class="header-area">
+        
+        <!-- ***** Navbar Area ***** -->
+        <div class="alazea-main-menu">
+            <div class="classy-nav-container breakpoint-off">
+                <div class="container">
+                    <!-- Menu -->
+                    <nav class="classy-navbar justify-content-between" id="alazeaNav">
+
+                         <!-- Nav Brand -->
+                        <a href="{{ url_for('index')}}" class="nav-brand"><img src="/static/img/core-img/logo.svg" alt="" height="50px" width="80px"></a>
+
+                        <!-- Navbar Toggler -->
+                        <div class="classy-navbar-toggler">
+                            <span class="navbarToggler"><span></span><span></span><span></span></span>
+                        </div>
+
+                        <!-- Menu -->
+                        <div class="classy-menu">
+
+                            <!-- Close Button -->
+                            <div class="classycloseIcon">
+                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                            </div>
+
+                            <!-- Navbar Start -->
+                            <div class="classynav">
+                                <ul>
+                                    <li><a href="{{ url_for('index')}}">Accueil</a></li>
+                                    <li><a href="{{ url_for('about')}}">A propos de nous</a></li>
+                                    <li><a href="#">Les données</a>
+                                        <ul class="dropdown">
+                                            <li><a href="{{ url_for('checkout')}}">Gestion des devices</a></li>
+                                            <li><a href="{{ url_for('data')}}">Dashboard </a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                    <li><a href="{{ url_for('portfolio')}}">Quelques conseils</a></li>
+                                    <li><a href="{{ url_for('contact')}}">Contact</a></li>
+                                </ul>
+
+                               
+
+                            </div>
+                            <!-- Navbar End -->
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ##### Header Area End ##### -->
+
+    <!-- ##### Breadcrumb Area Start ##### -->
+    <div class="breadcrumb-area">
+        <!-- Top Breadcrumb Area -->
+        <div class="top-breadcrumb-area bg-img bg-overlay d-flex align-items-center justify-content-center" style="background-image: url(/static/img/bg-img/24.jpg);">
+            <h2>GESTION DES DEVICES</h2>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="{{ url_for('index')}}"><i class="fa fa-home"></i> Accueil</a></li>
+							<li class="breadcrumb-item">Les données</li>
+                            <li class="breadcrumb-item active" aria-current="page">Gestion des devices</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ##### Breadcrumb Area End ##### -->
+
+    <!-- ##### Checkout Area Start ##### -->
+    <div class="checkout_area mb-100">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-12 col-lg-15">
+                    <div class="checkout_details_area clearfix">
+                        <h3>AJOUTER UN DEVICE</h3>
+                        <form action="#" method="post">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="first_name">Nom de la plante *</label>
+                                    <input type="text" class="form-control" id="first_name" value="" required>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <label for="last_name">ID du kit *</label>
+                                    <input type="text" class="form-control" id="last_name" value="" required>
+                                </div>
+
+                                <div class="col-12 mb-4">
+                                    <label for="email">Email *</label>
+                                    <input type="text" class="form-control" id="email" value="" required>
+                                </div>
+                                
+								<div class="col-12 mb-4">
+                                    <label for="country">Type de plante</label>
+                                    <select class="custom-select d-block w-100" id="type">
+                                        <option value="Plante grasse / cactus">Plante grasse / cactus</option>
+                                        <option value="Plante normale">Plante normale</option>
+                                        <option value="Plante tropicale">Plante tropicale</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="col-12">
+                                    <div class="d-flex align-items-center">
+                                        <!-- Single Checkbox -->
+                                        <div class="custom-control custom-checkbox d-flex align-items-center mr-30">
+                                            <span id="problems" ></span>
+                                            <!--input type="checkbox" class="custom-control-input" id="customCheck1">
+                                            <label class="custom-control-label" for="customCheck1">Envoyer des alertes relatives à votre device sur votre adresse mail?</label-->
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+						<br>
+						<div class="checkout-btn ">
+                            <a id = "validation" href="javascript:checkValidity()" class="btn alazea-btn w-100">VALIDER</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ##### Checkout Area End ##### -->
+	
+	
+	<div class="cart-area section-padding-0-100 clearfix">
+		<div class="container">	
+			<div class="row">
+				<div class="col-12">
+					<div class="cart-table clearfix">
+						<h3>LISTE DES DEVICES</h3>
+						<table class="table table-responsive">
+							<thead>
+								<tr>
+									<th>Plante</th>
+									<th>Id du kit</th>
+									<th>Type de plante</th>
+									
+									<th></th>
+								</tr>
+							</thead>
+							<tbody id="device_list">
+								<!--tr id = "product0">
+									<td class="cart_product_img">
+										<a href="#"><img src="/static/img/bg-img/34.jpg" alt="Product"></a>
+										<h5>Cactus</h5>
+									</td>
+									<td class="qty"><span>A45C98</span></td>
+									<td class="price"><span>Plante Grasse / Cactus</span></td>
+								
+                                    <td class="action"><a href="javascript:removeDevice(0)"><i class="icon_close"></i></a></td>
+								</tr-->
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+     <script type="text/javascript">
+        var counter = 0;
+        var len = 0;
+        var id_type = []; 
+
+        function addTabEntry(id,name,id,type){
+           var tableBody = document.getElementById("device_list");
+
+            var tr = document.createElement('TR');
+            tr.setAttribute('id',"product"+id);
+            tableBody.appendChild(tr);
+
+            // Create First TD
+            var td = document.createElement('TD');
+            td.setAttribute('class',"cart_product_img");
+            tr.appendChild(td);
+
+            var a = document.createElement('a');
+            a.setAttribute('href',"#");
+            td.appendChild(a);
+
+            var img = document.createElement('img');
+
+            if (type == "Plante grasse / cactus"){
+                img.setAttribute('src',"/static/img/bg-img/42.png");
+            }
+            else if (type == "Plante normale") {
+                img.setAttribute('src',"/static/img/bg-img/44.png");   
+            }
+            else {
+                img.setAttribute('src',"/static/img/bg-img/47.png");
+            }
+            img.setAttribute('alt',"Product");
+
+            var h5 = document.createElement('h5');
+            h5.innerHTML = name;
+
+            a.appendChild(img);
+            td.appendChild(h5);
+
+            // Create Second TD
+            var td = document.createElement('TD');
+            td.setAttribute('class',"qty");
+            tr.appendChild(td);
+
+            var span = document.createElement('span');
+            span.setAttribute('class',"find");
+            span.innerHTML = id;
+            td.appendChild(span);
+
+            // Create Third TD
+            var td = document.createElement('TD');
+            td.setAttribute('class',"price");
+            tr.appendChild(td);
+
+            var span = document.createElement('span');
+            span.innerHTML = type;
+            td.appendChild(span);
+
+            // Create Third TD
+            var td = document.createElement('TD');
+            td.setAttribute('class',"action");
+            tr.appendChild(td);
+
+            var a = document.createElement('a');
+            a.setAttribute('href',"javascript:removeDevice("+id+")");
+            td.appendChild(a);
+
+            var i = document.createElement('i');
+            i.setAttribute('class',"icon_close");
+            a.appendChild(i);
+        }
+
+         $.ajax({
+            url: "/api/values",
+            dataType: "json",
+            type: "GET",
+            contentType: "application/json; charset=utf-8",
+            success: function (data) {
+                if (data["status"] == "ok") {
+                    var key;
+                    var key_tab=[];
+                    for(key in data.val._default) {
+                        len++;
+                        key_tab.push(key);
+                    }
+                    for (var i = 0; i < len; i++){
+                        counter++;
+                        id_type.push([data["val"]["_default"][key_tab[i]].num]);
+                        addTabEntry(counter,data["val"]["_default"][key_tab[i]].nom,data["val"]["_default"][key_tab[i]].num,data["val"]["_default"][key_tab[i]].plant_type);
+                        
+                    }
+                }
+            }
+        });
+
+        function removeDevice(id){
+            var rm_id = "product" + id;
+            var elem = document.getElementById(rm_id);
+            rm_id = "#" + rm_id;
+            var ancor = $(rm_id ).find( ".find" );
+            let attribute =  ancor[0].textContent;
+            values = [{ "id": attribute}];
+            $.ajax({
+                type: "DELETE",
+                url: "http://a931-37-172-134-136.ngrok.io/api/device",
+                data: JSON.stringify(values),
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                crossDomain:true,
+                success: function (data) { console.log(data);},
+                failure: function (errMsg) { console.log(errMsg);}
+            });
+            attribute = parseInt(attribute);
+            console.log(attribute);
+            id_type = id_type.filter(element => element != attribute);
+            elem.innerHTML ='';
+            elem.remove();
+        }
+
+        function checkValidity(){
+            var name = document.getElementById("first_name");
+            var id = document.getElementById("last_name");
+            var type = document.getElementById("type");
+            var email = document.getElementById("email");
+            var isValidName = name.checkValidity();
+            var isValidID = id.checkValidity();
+            var isValidEmail = email.checkValidity();
+            var existingID = true;
+            var IDisANum = false;
+            if(!isNaN(id.value)) {
+                IDisANum = true;
+            }
+            var tmp = parseInt(id.value);
+            for (var i = 0; i < id_type.length; i++){
+                if (tmp == id_type[i][0]){
+                    existingID = false;
+                }
+            }
+
+            if( isValidName && isValidID && existingID && isValidEmail && IDisANum ) {
+                document.getElementById("problems").style.display= 'none';
+                id_type.push([tmp]);
+                counter++;
+                values = [{
+                        "nom": name.value,
+                        "plant_type": type.value,
+                        "num": id.value,
+                        "email":email.value,
+                        "measures": []
+                        }];
+
+                $.ajax({
+                    type: "POST",
+                    url: "http://a931-37-172-134-136.ngrok.io/api/device",
+                    data: JSON.stringify(values),
+                    //data: JSON.stringify({ Markers: markers }),
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    crossDomain:true,
+                    success: function (data) { console.log(data);},
+                    failure: function (errMsg) { console.log(errMsg);}
+                });
+
+                addTabEntry(counter,name.value,id.value,type.value);
+
+            }
+            else {
+                var elem = document.getElementById("problems");
+                if ( !isValidName ){
+                    elem.innerHTML ='Veuillez renseigner le nom de votre plante';
+                }
+                else if ( !isValidID ){
+                    elem.innerHTML ="Veuillez renseigner l'ID de votre kit";
+                }
+                else if ( !IDisANum ){
+                    elem.innerHTML ="L'ID de votre kit doit etre un nombre";
+                }
+                else if ( !isValidEmail ){
+                    elem.innerHTML ="Veuillez renseigner l'adresse email ou vous recevrez vos alertes.";
+                }
+                else if ( !existingID ){
+                    elem.innerHTML ="L'ID que vous avez renseigner existe déjà.";
+                }
+                elem.style.color = 'red';
+                elem.style.display = 'block';
+            } 
+        }
+
+    </script>
+
+   <!-- ##### Footer Area Start ##### -->
+    <footer class="footer-area bg-img" style="background-image: url(/static/img/bg-img/3.jpg);">
+        <!-- Main Footer Area -->
+        <div class="main-footer-area">
+            <div class="container">
+                <div class="row d-flex justify-content-center">
+
+                    <!-- Single Footer Widget -->
+                    <div class="col-12 col-sm-6 col-lg-5">
+                        <div class="single-footer-widget">
+                            <div class="footer-logo mb-50">
+                                <a href="{{ url_for('index')}}"><img src="/static/img/core-img/logo.svg" alt="" height="50px" width="80px"></a>
+                            </div>
+                            <h5 style="color:white;">L'innovation au service de l'entretien de votre plante</h5>
+                            
+                        </div>
+                    </div>
+
+                    
+
+                    <!-- Single Footer Widget -->
+                    <div class="col-12 col-sm-6 col-lg-5 d-flex justify-content-center">
+                        <div class="single-footer-widget">
+                            <div class="widget-title">
+                                <h5>CONTACT</h5>
+                            </div>
+
+                            <div class="contact-information">
+                                <p><span>iGarden:</span> igarden.eise@gmail.com</p>
+                                <p><span>Ismail BENNIS:</span> bennisismail9@gmail.com</p>
+                                <p><span>Alexandra DEAC:</span> alexandradeac44@gmail.com</p>
+                                <p><span>Julie RAGO:</span> julie.rgo1@gmail.com</p>
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom Area -->
+        <div class="footer-bottom-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="border-line"></div>
+                    </div>
+                    <!-- Copywrite Text -->
+                    <div class="col-12 col-md-6">
+                        <div class="copywrite-text">
+                            <p>&copy; <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+</p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ##### Footer Area End ##### -->
+
+    <!-- ##### All Javascript Files ##### -->
+
+    <!-- Popper js -->
+    <script src="/static/js/bootstrap/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="/static/js/bootstrap/bootstrap.min.js"></script>
+    <!-- All Plugins js -->
+    <script src="/static/js/plugins/plugins.js"></script>
+    <!-- Active js -->
+    <script src="/static/js/active.js"></script>
+</body>
+
+</html>
