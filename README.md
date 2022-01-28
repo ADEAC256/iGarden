@@ -19,8 +19,10 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
-[![Contributors][contributors-shield]][contributors-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
+[![Contributeurs][contributors-shield]][contributors-url]
+[![LinkedIn Ismail][linkedin-shield]][linkedin-url]
+[![LinkedIn Alexandra][linkedin-shield]][linkedin-url1]
+[![LinkedIn Julie][linkedin-shield]][linkedin-url2]
 
 
 
@@ -197,5 +199,7 @@ Project Link: [https://github.com/ADEAC256/iGarden](https://github.com/ADEAC256/
 [license-shield]: https://img.shields.io/github/license/github_username/repo_name.svg?style=for-the-badge
 [license-url]: https://github.com/ADEAC256/iGarden/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/linkedin_username
+[linkedin-url]: https://www.linkedin.com/in/ismail-bennis/
+[linkedin-url1]: https://www.linkedin.com/in/alexandra-deac/
+[linkedin-url2]: https://www.linkedin.com/in/julie-rago/
 [product-screenshot]: images/screenshot.png
