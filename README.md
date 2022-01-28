@@ -161,6 +161,15 @@ Pour pouvoir utiliser flask, vous aurez besoin d'installer virtualenv. Virtualen
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
+### Systeme 
+Changer le mdp et SSID et mettre le code sur le microcontroller + commande
+
+### Serveur 
+Lancer le serveur + comamnde
+
+### Site internet 
+
+
 _For more examples, please refer to the [Documentation](https://example.com)_
 
 <p align="right">(<a href="#top">back to top</a>)</p>
