@@ -81,7 +81,22 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+### Système construit avec
 
+* [ESP32](https://www.gotronic.fr/art-module-nodemcu-esp32-28407.htm)
+* [DHT22](https://www.gotronic.fr/art-capteur-de-t-et-d-humidite-dht22-20719.htm)
+* [DS18B20](https://www.gotronic.fr/art-sonde-etanche-ds18b20-19339.htm)
+* [Soil Moisture Sensor](https://tinydb.readthedocs.io/en/latest/gla)
+* [TSL2561](https://learn.adafruit.com/tsl2561)
+* [HC-SR04](https://www.gotronic.fr/art-module-de-detection-us-hc-sr04-20912.htm)
+* [GoTronic PM3V](https://www.gotronic.fr/art-pompe-miniature-submersible-pm3v-32875.htm)
+* [Adafruit Relay](https://www.adafruit.com/product/3191)
+
+
+### Serveur construit avec
+
+* [Flask](https://flask.palletsprojects.com/en/2.0.x/)
+* [TinyDb](https://tinydb.readthedocs.io/en/latest/gla)
 
 ### Site internet construit avec
 
