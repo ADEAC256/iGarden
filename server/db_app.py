@@ -53,7 +53,7 @@ def values():
 
           result[0]["measures"].append(value)
           print(len(result[0]["measures"]))
-          if ( len(result[0]["measures"]) >= 10 ) :
+          if ( len(result[0]["measures"]) >= 100 ) :
             result[0]["measures"].pop(0)
           res = db.get(Measures.num == str(num)).doc_id #On récupére l'ID du document ou on update les valeurs
           db.update(result[0], doc_ids=[res])
