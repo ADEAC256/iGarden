@@ -23,7 +23,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/ADEAC256/iGarden" style = "background-color:green;">
+  <a href="https://github.com/ADEAC256/iGarden">
     <img src="website/static/img/core-img/logo_repo.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -194,10 +194,19 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <!-- ROADMAP -->
 ## <a name="schema"></a> Schéma des architectures 
 
-### <a name="hard"></a> Architecture hardware 
+### <a name="hard"></a> Architecture hardware
+<br />
+<div align="center">
+  <a href="https://github.com/ADEAC256/iGarden">
+    <img src="/documentation/schematic/iGarden_schema.jpg" alt="Architecture Hardware" width="100%" height="100%">
+  </a>
+</div>
+<br />
 Photo de l'architecture (+ quelques mots)
-<br>
+<br />
+
 ### <a name="soft"></a> Architecture software
+
 Photo de l'architecture (+ quelques mots)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
