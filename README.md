@@ -73,7 +73,7 @@
 
 
 <!-- ABOUT THE PROJECT -->
-## About The Project
+## A propos du projet
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
