@@ -19,12 +19,6 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
-[![Contributeurs][contributors-shield]][contributors-url]
-[![LinkedIn Ismail][linkedin-shield]][linkedin-url]
-[![LinkedIn Alexandra][linkedin-shield]][linkedin-url1]
-[![LinkedIn Julie][linkedin-shield]][linkedin-url2]
-
-
 
 <!-- PROJECT LOGO -->
 <br />
@@ -36,7 +30,7 @@
 <h3 align="center">iGarden</h3>
 
   <p align="center">
-    Description du projet
+    Quand une fleur ne fleurit pas, on corrige l'environnement dans lequel elle pousse. Pas la fleur.
     <br />
     <a href="https://github.com/ADEAC256/iGarden"><strong>Explore the docs »</strong></a>
     <br />
@@ -77,7 +71,15 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email`, `email_client`, `project_title`, `project_description`
+Le projet iGarden a été conçu dans le cadre du module “Projet Objets Connectés” par trois élèves : Ismail BENNIS, Alexandra DEAC et Julie RAGO, élèves ingénieurs en EISE à Polytech Sorbonne.  
+
+Ce projet est né de la problématique liée au manque de connaissances lorsque l’on souhaite avoir une plante d’intérieur chez soi. En effet, il n’est pas toujours facile, pour une personne débutante, de penser à arroser ses plantes au bon moment, de connaître la quantité d’eau requise, ou bien de savoir si la plante est placée au bon endroit. 
+
+Notre solution, iGarden, consisterait donc en un système permettant : 
+* La collecte de données sur l’environnement de la plante (température et humidité dans le sol et dans l’air, luminosité)
+* La mise à disposition de ces données sur une interface en ligne
+* L’arrosage automatique des plantes à distance.
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -191,23 +193,17 @@ See the [open issues](https://github.com/ADEAC256/iGarden/issues) for a full lis
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
-
+iGarden - igarden.eise@gmail.com
+<br>
+<br>
 Project Link: [https://github.com/ADEAC256/iGarden](https://github.com/ADEAC256/iGarden)
 
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-
-* []()
-* []()
-* []()
+### Equipe : 
+* Ismail BENNIS : [Linkedin](https://www.linkedin.com/in/ismail-bennis/)
+* Alexandra DEAC : [Linkedin](https://www.linkedin.com/in/alexandra-deac/)
+* Julie RAGO : [Linkedin](https://www.linkedin.com/in/julie-rago/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
