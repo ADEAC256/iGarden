@@ -130,7 +130,7 @@ Pour reproduire le système iGarden chez vous, le matériel et logiciels suivant
   * [Adafruit Relay](https://www.adafruit.com/product/3191)
 
 
-### <a name="requis"></a> Pre-requis
+### <a name="requis"></a> Pré-requis
 
 Pour pouvoir utiliser flask, vous aurez besoin d'installer virtualenv. Virtualenv aide un utilisateur à créer plusieurs environnements Python côte à côte . Ainsi, il peut éviter les problèmes de compatibilité entre les différentes versions des bibliothèques. Cette commande nécessite des privilèges d'administrateur. 
 * virtualenv
@@ -207,7 +207,10 @@ _For more examples, please refer to the [Documentation](https://example.com)_
   </a>
 </div>
 <br />
-Photo de l'architecture (+ quelques mots)
+Voici ci-dessus le schéma de câblage à réaliser sur breadboard pour votre système iGarden. 
+
+Celui-ci prend en compte l'alimentation du microcontrôleur, l’implémentation des différents capteurs, ainsi qu’un écran LCD permettant l’affichage d’informations importantes.
+
 <br />
 
 ### <a name="soft"></a> Architecture software
