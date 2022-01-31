@@ -158,7 +158,7 @@ Pour pouvoir utiliser flask, vous aurez besoin d'installer virtualenv. Virtualen
 
 ### <a name="file"></a> Fichiers 
 
-- `hardware` contient le software du système. Le code est à mettre sur l'ESP32
+- `hardware` contient le code du système à flasher sur l'ESP32
  
 - `server` contient le software du serveur et la base de données.
  
@@ -219,7 +219,7 @@ Photo de l'architecture (+ quelques mots)
 ### <a name="flask"></a> Serveur construit avec
 
 * [Flask](https://flask.palletsprojects.com/en/2.0.x/)
-* [TinyDb](https://tinydb.readthedocs.io/en/latest/gla)
+* [TinyDb](https://tinydb.readthedocs.io/en/latest/intro.html)
 
 ### <a name="bootstrap"></a> Site internet construit avec
 
