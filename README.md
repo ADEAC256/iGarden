@@ -57,18 +57,18 @@
       </ul>
     </li>
     <li>
+      <a href="#schema">Schema des architectures</a>
+      <ul>
+        <li><a href="#hard">Architecture hardware</a></li>
+        <li><a href="#soft">Architecture software</a></li>
+      </ul>
+    </li>
+     <li>
       <a href="#usage">Usage</a>
       <ul>
         <li><a href="#serveur">Serveur</a></li>
         <li><a href="#systeme">Système</a></li>
         <li><a href="#site">Site internet</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#schema">Schema des architectures</a>
-      <ul>
-        <li><a href="#hard">Architecture hardware</a></li>
-        <li><a href="#soft">Architecture software</a></li>
       </ul>
     </li>
     <li>
@@ -173,29 +173,6 @@ Pour pouvoir utiliser flask, vous aurez besoin d'installer virtualenv. Virtualen
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-<!-- USAGE EXAMPLES -->
-## <a name="usage"></a> Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-### <a name="serveur"></a> Serveur 
-Comment lancer le serveur + ngrok + parler des alertes email
-
-### <a name="systeme"></a> Systeme 
-Changer le mdp et SSID du wifi + changer lien ngrok
-
-Pour mettre le code sur le microcontrolleur, nous vous conseillons d'utiliser une IDE comme [Arduino](https://www.arduino.cc/).
-
-### <a name="site"></a> Site internet 
-Expliquer les liens a changer ngrok
-Expliquer ce qu'on retrouve le dashboard + screen et qu'on peut gerer plusieurs systèmes dessus 
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
 <!-- ROADMAP -->
 ## <a name="schema"></a> Schéma des architectures 
 
@@ -210,8 +187,6 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 Voici ci-dessus le schéma de câblage à réaliser sur breadboard pour votre système iGarden. 
 
 Celui-ci prend en compte l'alimentation du microcontrôleur, l’implémentation des différents capteurs, ainsi qu’un écran LCD permettant l’affichage d’informations importantes.
-
-<br />
 
 ### <a name="soft"></a> Architecture software
 
@@ -242,6 +217,63 @@ Nous avons le système ESP32 qui va perpétuellement envoyer au serveur une requ
 
 Une fois ces informations fournies par l’utilisateur via le site web, le système se mettra ensuite à envoyer de manière régulière les données récoltées par ses capteurs. 
 
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- USAGE EXAMPLES -->
+## <a name="usage"></a> Usage
+
+Dans cette partie figureront les instructions pour lancer les différents éléments constituant le système iGarden.
+
+### <a name="serveur"></a> Serveur 
+Comment lancer le serveur + ngrok + parler des alertes email
+Pour lancer le serveur, il suffit d’exécuter la commande suivante dans le répertoire où se situent les codes disponibles dans le dossier server : <br>
+```sh
+python3 db_app.py
+```
+<br>
+L’exécution devrait rendre l’affichage suivant dans le terminal :
+<br><br>
+PHOTO 
+<br><br>
+Comme on peut le voir à la dernière ligne de code de ce script python, le serveur sera lancé en localhost, sur le port 5002 (le numéro de port peut être modifiable). 
+<br>
+<br>
+On utilise ensuite sur un autre terminal en parallèle l’outil ngrok, qui permet de créer un tunnel depuis le localhost vers une URL publique accessible pour les autres parties du système global : 
+<br><br>
+PHOTO 
+<br><br>
+Celui-ci affiche donc l’adresse URL à renseigner pour le côté système et le côté website.
+
+### <a name="systeme"></a> Systeme 
+<br>
+Du côté système, dans le dossier hardware du git se trouve le fichier .ino du code à flasher sur l’ESP32. Pour mettre le code sur un microcontrolleur, nous vous conseillons d'utiliser une IDE [Arduino](https://www.arduino.cc/).
+<br> <br>
+Avant de flasher le code sur la carte, il faut penser à mettre à jour certaines informations :
+  * Puisque nous utilisons le module WiFi de l’ESP32 pour communiquer avec le serveur, il est nécessaire de renseigner le SSID (nom de réseau) ainsi que le mot de passe du réseau WiFi où vous souhaitez installer iGarden (lignes 19 et 20 du code).
+  * C’est aussi à ce moment que l’on met à jour l’URL d’accès au serveur (lignes 316 et 320).
+
+### <a name="site"></a> Site internet 
+<br>
+Ici aussi nous devons mettre à jour le lien ngrok dans le dossier website aux endroits suivants : 
+
+  * Dans le fichier app.py, à la ligne 82,
+  * Dans le fichier checkout.html, aux lignes 308 et 357
+
+Il suffit ensuite de lancer l’application de la même manière que le serveur : <br>
+```sh
+python3 app.py
+```
+<br>
+Lorsque l’on se connecte sur un navigateur internet, on peut apercevoir l’affichage suivant pour enregistrer sa plante :
+<br><br>
+PHOTO 
+<br><br>
+A partir d’un même compte utilisateur, il est possible de monitorer plusieurs plantes. 
+
+Une fois la plante enregistrée, il est possible d’accéder au dashboard :
+<br><br>
+PHOTO 
+<br><br>
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## <a name="tools"></a> Outils utilisés
