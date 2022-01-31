@@ -98,7 +98,7 @@
  </div>
  <br>
 
-Le projet iGarden a été conçu dans le cadre du module “Projet Objets Connectés” par trois élèves : Ismail BENNIS, Alexandra DEAC et Julie RAGO, élèves ingénieurs en EISE à Polytech Sorbonne.  
+Le projet iGarden a été conçu dans le cadre du module “Projet Objets Connectés” par trois élèves : Ismail BENNIS, Alexandra DEAC et Julie RAGO, élèves ingénieurs en EISE (Electronique et Informatique des Systèmes Embarqués) à Polytech Sorbonne.  
 
 Ce projet est né de la problématique liée au manque de connaissances lorsque l’on souhaite avoir une plante d’intérieur chez soi. En effet, il n’est pas toujours facile, pour une personne débutante, de penser à arroser ses plantes au bon moment, de connaître la quantité d’eau requise, ou bien de savoir si la plante est placée au bon endroit. 
 
@@ -215,7 +215,29 @@ Celui-ci prend en compte l'alimentation du microcontrôleur, l’implémentation
 
 ### <a name="soft"></a> Architecture software
 
-Photo de l'architecture (+ quelques mots)
+<br />
+<div align="center">
+  <a href="https://github.com/ADEAC256/iGarden">
+    <img src="/documentation/schematic/simple_schema.png" alt="Architecture Hardware" width="80%" height="80%">
+  </a>
+</div>
+<br />
+Dans un premier temps, l’utilisateur devra s’enregistrer sur le site, et il devra renseigner par la même occasion le type de plante qu’il possède. 
+
+Ces informations seront reçues par le serveur qui va les enregistrer dans sa base de données, puis il retournera à l’ESP32 le type de plante pour qu’ensuite le microcontrôleur puisse analyser correctement les valeurs perçues par les capteurs en fonction des besoins de la plante. 
+
+Les valeurs mesurées seront retournées à l’utilisateur et enregistrées par l’intermédiaire du serveur et de sa base de données. 
+
+Concernant le protocole de communication, nous avons fait le choix d’implémenter un serveur <b>RESTful</b> qui manipule des données au format <b>JSON</b>.
+
+Une communication typique se déroule de la manière suivante : 
+<br />
+<div align="center">
+  <a href="https://github.com/ADEAC256/iGarden">
+    <img src="/documentation/schematic/soft_schema.png" alt="Architecture Hardware" width="80%" height="80%">
+  </a>
+</div>
+<br />
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
