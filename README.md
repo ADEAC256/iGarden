@@ -238,6 +238,9 @@ Une communication typique se déroule de la manière suivante :
   </a>
 </div>
 <br />
+Nous avons le système ESP32 qui va perpétuellement envoyer au serveur une requête GET en attendant de recevoir un id de plante ainsi que son type correspondant. 
+
+Une fois ces informations fournies par l’utilisateur via le site web, le système se mettra ensuite à envoyer de manière régulière les données récoltées par ses capteurs. 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
