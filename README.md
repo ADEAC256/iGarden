@@ -91,9 +91,12 @@
 <!-- ABOUT THE PROJECT -->
 ## <a name="propos"></a> A propos du projet
 
+<div align="center">
  <a href="https://github.com/ADEAC256/iGarden">
     <img src="documentation/schematic/plante_scene.png" alt="Product" width="80%" height="80%">
   </a>
+ </div>
+ <br>
 
 Le projet iGarden a été conçu dans le cadre du module “Projet Objets Connectés” par trois élèves : Ismail BENNIS, Alexandra DEAC et Julie RAGO, élèves ingénieurs en EISE à Polytech Sorbonne.  
 
