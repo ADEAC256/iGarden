@@ -79,7 +79,7 @@ def meteo():
 
 @app.route('/api/values')
 def values():
-    response = requests.get("http://a931-37-172-134-136.ngrok.io/api/device")
+    response = requests.get("http://3a43-37-172-131-208.ngrok.io/api/device")
     content = json.loads(response.content.decode('utf-8'))
     return jsonify({
       'status': 'ok', 
