@@ -276,7 +276,7 @@ Lorsque l’on se connecte sur un navigateur internet, on peut apercevoir l’af
 <br><br>
 <div align="center">
  <a href="https://github.com/ADEAC256/iGarden">
-    <img src="documentation/schematic/web_add_people.png" alt="Product" width="80%" height="80%">
+    <img src="documentation/schematic/web_add_people.PNG" alt="Web" width="80%" height="80%">
   </a>
  </div> 
 <br><br>
