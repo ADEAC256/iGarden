@@ -225,7 +225,6 @@ Une fois ces informations fournies par l’utilisateur via le site web, le syst�
 Dans cette partie figureront les instructions pour lancer les différents éléments constituant le système iGarden.
 
 ### <a name="serveur"></a> Serveur 
-Comment lancer le serveur + ngrok + parler des alertes email
 Pour lancer le serveur, il suffit d’exécuter la commande suivante dans le répertoire où se situent les codes disponibles dans le dossier server : <br>
 ```sh
 python3 db_app.py
@@ -254,7 +253,7 @@ Celui-ci affiche donc l’adresse URL à renseigner pour le côté système et l
 
 ### <a name="systeme"></a> Systeme 
 <br>
-Du côté système, dans le dossier hardware du git se trouve le fichier .ino du code à flasher sur l’ESP32. Pour mettre le code sur un microcontrolleur, nous vous conseillons d'utiliser une IDE [Arduino](https://www.arduino.cc/).
+Du côté système, dans le dossier hardware du git se trouve le fichier .ino du code à flasher sur l’ESP32. Pour mettre le code sur un microcontrolleur, nous vous conseillons d'utiliser une IDE <a name="arduino" href = "https://www.arduino.cc/">Arduino</a>.
 <br> <br>
 Avant de flasher le code sur la carte, il faut penser à mettre à jour certaines informations :
   * Puisque nous utilisons le module WiFi de l’ESP32 pour communiquer avec le serveur, il est nécessaire de renseigner le SSID (nom de réseau) ainsi que le mot de passe du réseau WiFi où vous souhaitez installer iGarden (lignes 19 et 20 du code).
