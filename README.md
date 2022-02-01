@@ -233,14 +233,22 @@ python3 db_app.py
 <br>
 L’exécution devrait rendre l’affichage suivant dans le terminal :
 <br><br>
-PHOTO 
+<div align="center">
+ <a href="https://github.com/ADEAC256/iGarden">
+    <img src="documentation/schematic/usage_server.png" alt="Product" width="80%" height="80%">
+  </a>
+ </div>
 <br><br>
 Comme on peut le voir à la dernière ligne de code de ce script python, le serveur sera lancé en localhost, sur le port 5002 (le numéro de port peut être modifiable). 
 <br>
 <br>
 On utilise ensuite sur un autre terminal en parallèle l’outil ngrok, qui permet de créer un tunnel depuis le localhost vers une URL publique accessible pour les autres parties du système global : 
 <br><br>
-PHOTO 
+<div align="center">
+ <a href="https://github.com/ADEAC256/iGarden">
+    <img src="documentation/schematic/usage_server_ngrok.png" alt="Product" width="80%" height="80%">
+  </a>
+ </div>
 <br><br>
 Celui-ci affiche donc l’adresse URL à renseigner pour le côté système et le côté website.
 
@@ -266,7 +274,11 @@ python3 app.py
 <br>
 Lorsque l’on se connecte sur un navigateur internet, on peut apercevoir l’affichage suivant pour enregistrer sa plante :
 <br><br>
-PHOTO 
+<div align="center">
+ <a href="https://github.com/ADEAC256/iGarden">
+    <img src="documentation/schematic/web_add_people.png" alt="Product" width="80%" height="80%">
+  </a>
+ </div> 
 <br><br>
 A partir d’un même compte utilisateur, il est possible de monitorer plusieurs plantes. 
 
