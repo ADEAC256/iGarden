@@ -16,13 +16,13 @@ NTPClient timeClient(ntpUDP);
 unsigned short int ID = 1;
  
 /********* Données connexion wifi *********/
-const char* WIFI_SSID = "Ismux";      // Put here your Wi-Fi SSID
-const char* WIFI_PASS = "ismawifi1999";      // Put here your Wi-Fi password
+const char* WIFI_SSID = "Alex&friends";      // Put here your Wi-Fi SSID
+const char* WIFI_PASS = "al3x1nP1s#";      // Put here your Wi-Fi password
 
 /********* Telemetre *********/
 #define VITESSE 340
-const int Trig = 12; 
-const int Echo = 13;
+const int Trig = 13; 
+const int Echo = 12;
 const int distanceRef = 15; // Distance de référence pour le télémètre (0% d'eau) + Penser à ajouter 5 cm de sécurité
 
 /********* Pompe *********/
@@ -38,7 +38,7 @@ const int dhtPin = 15; // remettre 15
 DHT dht(dhtPin, DHT22);
 
 /********* DS18B20 : Capteur de température du sol *********/
-#define DSB_BUS 5
+#define DSB_BUS 19
 OneWire dsbWire(DSB_BUS);
 DallasTemperature dsb(&dsbWire);
 
@@ -49,7 +49,7 @@ Adafruit_TSL2591 tsl = Adafruit_TSL2591(2591);
 Adafruit_SSD1306 ecranOLED(128, 32, &Wire, -1);
 
 /********* Batterie *********/
-const int batterie = 33; // Pour lire l'état de la batterie
+const int batterie = 32; // Pour lire l'état de la batterie
 
 /********* Bouton + Filtre anti-rebond (debouncer) *********/
 struct Button {
@@ -211,7 +211,7 @@ void IRAM_ATTR isr() {
   }
   lcd_print_irq(button1.numberKeyPresses, 0);
   
-  Serial.printf("Button 1 has been pressed %u times\n", button1.numberKeyPresses);
+  Serial.//printf("Button 1 has been pressed %u times\n", button1.numberKeyPresses);
 }
 
 void arrosage(int seuil){ // seuil d'humidité
@@ -234,7 +234,7 @@ void arrosage(int seuil){ // seuil d'humidité
        ecranOLED.display();
        delay(1000);
     }
-    printf("Humidite : %d\nSeuil : %d\n", hum, seuil);
+    ////printf("Humidite : %d\nSeuil : %d\n", hum, seuil);
     if(hum > seuil){
       attachInterrupt(button1.PIN, isr, FALLING); // On remet l'interruption avant de quitter la fonction
       break;
@@ -266,7 +266,7 @@ void setup() {
   Serial.begin(115200);
     /********* Bouton Poussoir / IRQ *********/
   pinMode(button1.PIN, INPUT_PULLDOWN);
-  attachInterrupt(button1.PIN, isr, FALLING);
+  //attachInterrupt(button1.PIN, isr, FALLING);
   
   /********* Init LCD *********/
   ecranOLED.begin(SSD1306_SWITCHCAPVCC, 0x3C); // Ecran LED
@@ -313,7 +313,7 @@ void loop() {
   /********* HTTP GET *********/
   short int getOK = 0;
   short int ret = -1;
-  String destination = "http://692f-37-171-196-231.ngrok.io/api/values?num=1";
+  String destination = "http://e6ac-91-169-172-71.ngrok.io/api/values?num=1";
   HTTPClient http;
   http.begin(destination);  //Specify destination for HTTP request
   http.addHeader("Content-Type", "application/json");             //Specify content-type header
@@ -355,6 +355,7 @@ void loop() {
 
   /********* Lire le capteur d'humidité sol *********/
   int s = analogRead(soilSensor);
+  //printf("soil = %d\n\r", s);
   int soilPercent = map(s, WaterValue, AirValue, 100, 0);
   if(soilPercent < 0)
     soilPercent = 0;
@@ -363,6 +364,7 @@ void loop() {
     
   /********* Lire le capteur de luminosité *********/
   int luminosite = tsl.getLuminosity(TSL2591_VISIBLE);
+  //printf("lum: %d \n\r",luminosite);
   int indiceLumiere;
   if(luminosite < 800){
     indiceLumiere = 0; // Mauvais
@@ -380,6 +382,7 @@ void loop() {
   delayMicroseconds(10); //on attend 10 µs
   digitalWrite(Trig, LOW);
   unsigned long duree = pulseIn(Echo, HIGH);
+  //printf("duree: %d\n",duree);
   int distancePercent = 0;
   float distance;
   duree = duree/2;  
@@ -390,7 +393,8 @@ void loop() {
     distancePercent = 100;
   if(distancePercent < 0)
     distancePercent = 0;
-
+  //printf("distance : %f \n\r",distance);
+  //printf("distancePercent : %d \n\r",distancePercent);
   /********* Verification niveau d'eau *********/
   if(distancePercent < 20.00)
     lcd_print_msg(1, distancePercent);
@@ -412,17 +416,18 @@ void loop() {
   /********* Récupération de la date *********/
   timeClient.update();
   unsigned long date = timeClient.getEpochTime();
-  
+ 
   /********* Envoie de données *********/
   if (WiFi.status() == WL_CONNECTED) {
     
     /********* Construction du Header HTTP *********/
-    destination = "http://692f-37-171-196-231.ngrok.io/api/values";
+    destination = "http://e6ac-91-169-172-71.ngrok.io/api/values";
     HTTPClient http;
     //String destination = "http://things.ubidots.com/api/v1.6/devices/esp32?token=BBFF-hCqc4WfJBF936HT86dH8P9IHbzCHzm";
     http.begin(destination);  //Specify destination for HTTP request
     http.addHeader("Content-Type", "application/json");
-    
+
+    indiceLumiere = 2;
     /********* Ajouter les valeurs à la payload *********/
     String payload = "{\"num\":" + String(ID) + ",";
     payload = payload + "\"hum_air\":" + String(h) + ",";
@@ -459,8 +464,11 @@ void loop() {
   }
   
   /********* Arrosage si besoin *********/
+  //printf("soil percent : %d\n",soilPercent);
+  //printf("seuilHumidite : %d\n",seuilHumidite);
+  
   if(soilPercent < seuilHumidite)
-    //arrosage(seuilHumidite);
+    arrosage(seuilHumidite);
 
   /********* Mise en veille *********/
   lcd_print_msg(3, -1);
