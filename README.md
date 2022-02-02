@@ -282,8 +282,11 @@ Lorsque l’on se connecte sur un navigateur internet, on peut apercevoir l’af
 A partir d’un même compte utilisateur, il est possible de monitorer plusieurs plantes. 
 
 Une fois la plante enregistrée, il est possible d’accéder au dashboard :
-<br><br>
-PHOTO 
+<div align="center">
+ <a href="https://github.com/ADEAC256/iGarden">
+    <img src="documentation/schematic/dashboard.PNG" alt="Web" width="80%" height="80%">
+  </a>
+ </div> 
 <br><br>
 <p align="right">(<a href="#top">back to top</a>)</p>
 
