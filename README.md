@@ -193,7 +193,7 @@ Celui-ci prend en compte l'alimentation du microcontrôleur, l’implémentation
 <br />
 <div align="center">
   <a href="https://github.com/ADEAC256/iGarden">
-    <img src="/documentation/schematic/simple_schema.png" alt="Architecture Hardware" width="80%" height="80%">
+    <img src="/documentation/schematic/iGarden_global_schema.png" alt="Architecture Hardware" width="90%" height="90%">
   </a>
 </div>
 <br />
