@@ -8,16 +8,17 @@
 #include <NTPClient.h>
 #include <WiFiUdp.h>
 
-/********* Données Wifi *********/
-#define TOKEN "BBFF-hCqc4WfJBF936HT86dH8P9IHbzCHzm" // Ubidots Token
-#define DEVICE_LABEL "esp32"
-WiFiUDP ntpUDP;
-NTPClient timeClient(ntpUDP);
+/********* ID du device dans la base de donnée *********/
 unsigned short int ID = 1;
- 
+String destination = "http://697c-37-171-24-7.ngrok.io";
+
 /********* Données connexion wifi *********/
 const char* WIFI_SSID = "Ismux";      // Put here your Wi-Fi SSID
 const char* WIFI_PASS = "ismawifi1999";      // Put here your Wi-Fi password
+
+/********* Récupération du timestamp  *********/
+WiFiUDP ntpUDP;
+NTPClient timeClient(ntpUDP);
 
 /********* Telemetre *********/
 #define VITESSE 340
@@ -167,41 +168,6 @@ void lcd_print_msg(int code, int value){
   ecranOLED.display();
 }
 
-
-void lcd_print_irq(int code, int value){
-  ecranOLED.clearDisplay();
-  ecranOLED.setTextSize(1.75); // Draw 2X-scale text
-  ecranOLED.setTextColor(SSD1306_WHITE);
-  ecranOLED.setCursor(0, 12);
-
-  switch(code){
-    case 1:
-      ecranOLED.write("Batterie");
-      ecranOLED.print(value);
-      ecranOLED.display();
-      break;
-    case 2:
-      ecranOLED.write("Temperature");
-      ecranOLED.print(value);
-      ecranOLED.display();
-      break;
-    case 3:
-      ecranOLED.write("Humidite");
-      ecranOLED.print(value);
-      ecranOLED.display();
-      break;
-    case 4:
-      ecranOLED.write("Luminosite");
-      ecranOLED.print(value);
-      ecranOLED.display();
-      break;
-    default:
-      break;
-  }
-  delay(2000);
-
-}
-
 /********* IRQ *********/
 /*void IRAM_ATTR isr() {
   delay(50);
@@ -313,9 +279,9 @@ void loop() {
   /********* HTTP GET *********/
   short int getOK = 0;
   short int ret = -1;
-  String destination = "http://69c1-37-165-77-64.ngrok.io/api/values?num=1";
+  String destinationGet = destination + "/api/values?num=" + String(ID);
   HTTPClient http;
-  http.begin(destination);  //Specify destination for HTTP request
+  http.begin(destinationGet);  //Specify destination for HTTP request
   http.addHeader("Content-Type", "application/json");             //Specify content-type header
   
   while(getOK == 0 && ret == -1){
@@ -418,20 +384,19 @@ void loop() {
   timeClient.update();
   unsigned long date = timeClient.getEpochTime();
 
-  /*printf("Pompe HIGH\n");
-  digitalWrite(pompe, HIGH);
-  delay(1000);
-  printf("Pompe LOW\n");
-  digitalWrite(pompe, LOW);*/
+  /********* Vérifier si les données sont valides *********/
+  if(isnan(t))
+    t = 0;
+  if(isnan(h))
+    h = 0;
   
   /********* Envoie de données *********/
   if (WiFi.status() == WL_CONNECTED) {
     
     /********* Construction du Header HTTP *********/
-    destination = "http://69c1-37-165-77-64.ngrok.io/api/values";
+    String destinationPost = destination + "/api/values";
     HTTPClient http;
-    //String destination = "http://things.ubidots.com/api/v1.6/devices/esp32?token=BBFF-hCqc4WfJBF936HT86dH8P9IHbzCHzm";
-    http.begin(destination);  //Specify destination for HTTP request
+    http.begin(destinationPost);  //Specify destination for HTTP request
     http.addHeader("Content-Type", "application/json");
 
     /********* Ajouter les valeurs à la payload *********/
@@ -448,7 +413,6 @@ void loop() {
     Serial.println(payload);
  
     /********* POST les données *********/
-    //int httpResponseCode = 0;
     lcd_print_msg(6, -1);
     int httpResponseCode = http.POST(payload);   //Send the actual POST request
     
@@ -470,15 +434,12 @@ void loop() {
   }
   
   /********* Arrosage si besoin *********/
-  //printf("soil percent : %d\n",soilPercent);
-  //printf("seuilHumidite : %d\n",seuilHumidite);
-  
   if(soilPercent < seuilHumidite)
     arrosage(seuilHumidite);
 
   /********* Mise en veille *********/
   lcd_print_msg(3, -1);
   esp_sleep_enable_timer_wakeup(10 * 1000000); // Mettre en deepsleep pendant 10 sec
-  //esp_sleep_enable_ext0_wakeup(GPIO_NUM_2,1);
+  //esp_sleep_enable_ext0_wakeup(GPIO_NUM_2,1); // Réveiller l'esp avec une interruption GPIO
   esp_deep_sleep_start();
 }
