@@ -10,11 +10,11 @@
 
 /********* ID du device dans la base de donnée *********/
 unsigned short int ID = 1;
-String destination = "http://697c-37-171-24-7.ngrok.io";
+String destination = "PUT YOUR NGROK LINK HERE";
 
 /********* Données connexion wifi *********/
-const char* WIFI_SSID = "Ismux";      // Put here your Wi-Fi SSID
-const char* WIFI_PASS = "ismawifi1999";      // Put here your Wi-Fi password
+const char* WIFI_SSID = "PUT YOUR SSID HERE";
+const char* WIFI_PASS = "PUT YOU PASSWORD HERE";
 
 /********* Récupération du timestamp  *********/
 WiFiUDP ntpUDP;
